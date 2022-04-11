@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.csc311hw2.PrimaryController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New Game" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0">
+         <children>
+            <Line endX="199.0" layoutX="100.0" layoutY="85.0" startX="-100.0" strokeWidth="3.0" />
+            <Line endX="198.0" layoutX="101.0" layoutY="187.0" startX="-100.0" strokeWidth="3.0" />
+            <Line endX="-38.5" endY="182.0" layoutX="126.0" layoutY="93.0" startX="-38.5" startY="-93.0" strokeWidth="3.0" />
+            <Line endX="35.5" endY="-90.0" layoutX="175.0" layoutY="90.0" startX="35.5" startY="185.0" strokeWidth="3.0" />
+            <Rectangle fx:id="TLRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="6.0" layoutY="14.0" onMouseClicked="#hitTL" onMousePressed="#hitTL" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="TMRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="114.0" layoutY="14.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="TRRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="220.0" layoutY="14.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="MLRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="6.0" layoutY="114.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="MMRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="114.0" layoutY="114.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="MRRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="220.0" layoutY="114.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="LLRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="6.0" layoutY="206.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="LMRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="114.0" layoutY="206.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Rectangle fx:id="LRRect" arcHeight="5.0" arcWidth="5.0" fill="#1ffff5" height="48.0" layoutX="220.0" layoutY="206.0" opacity="0.0" stroke="#d70e0e" strokeType="INSIDE" strokeWidth="2.0" width="72.0" />
+            <Circle fx:id="TLCircle" fill="#ff1f1f" layoutX="38.0" layoutY="43.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="TMCircle" fill="#ff1f1f" layoutX="150.0" layoutY="43.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="TRCircle" fill="#ff1f1f" layoutX="256.0" layoutY="43.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="MLCircle" fill="#ff1f1f" layoutX="43.0" layoutY="138.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="MMCircle" fill="#ff1f1f" layoutX="150.0" layoutY="138.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="MRCircle" fill="#ff1f1f" layoutX="256.0" layoutY="138.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="LLCircle" fill="#ff1f1f" layoutX="43.0" layoutY="230.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="LMCircle" fill="#ff1f1f" layoutX="150.0" layoutY="230.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle fx:id="LRCircle" fill="#ff1f1f" layoutX="256.0" layoutY="230.0" opacity="0.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
