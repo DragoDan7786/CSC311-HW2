@@ -10,11 +10,22 @@ package com.mycompany.csc311hw2;
  * @author sulem
  */
 public class Node {
-    private int playerTurn;
     private int shapeType;
     
-    public Node(int playerTurn , int shapeType){
-        this.playerTurn = playerTurn;
+    public Node(int shapeType){
         this.shapeType = shapeType;
+    }
+    
+    public int getShapeType(){
+        return shapeType;
+    }
+    
+    @Override
+    public boolean equals(Object other){
+        Node otherNode = (Node)other;
+        if(shapeType == otherNode.shapeType)
+            return true;
+        else
+            return false;
     }
 }
