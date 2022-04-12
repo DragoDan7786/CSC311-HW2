@@ -10,22 +10,40 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.util.Duration;
 
+/**
+ *
+ * @author suleman ali
+ */
 public class PrimaryController {
 
+    /**
+     * field playerTurn helps keep track of whose turn it is. Player one is
+     * going to be even, and Player two is going to be odd
+     */
     private int playerTurn;
+    /**
+     * theBoard is a two dimensional array that stores the state of the playing
+     * board by using nodes to record each cell
+     */
     private Node[][] theBoard = new Node[3][3];
     //instantiation of all rectangles
     @FXML
     private Rectangle TLRect = new Rectangle(), TMRect = new Rectangle(), TRRect = new Rectangle(), MLRect = new Rectangle(), MMRect = new Rectangle(), MRRect = new Rectangle(), LLRect = new Rectangle(), LMRect = new Rectangle(), LRRect = new Rectangle();
-//    //instantiation of all cirlces
+    //instantiation of all cirlces
     @FXML
     private Circle TLCircle = new Circle(), TMCircle = new Circle(), TRCircle = new Circle(), MLCircle = new Circle(), MMCircle = new Circle(), MRCircle = new Circle(), LLCircle = new Circle(), LMCircle = new Circle(), LRCircle = new Circle();
-
+    //creating a node thats empty to check if a node is full
     private Node empty;
+    //reason for these integers are to make further code more readable
     private int rect = 1;
     private int circle = 2;
+    //checks if game is over
     private boolean finished;
 
+    /**
+     * initialize method - Creates board, instantiates theBoard array with empty
+     * nodes, and defines empty
+     */
     @FXML
     private void initialize() {
         playerTurn = 0;
@@ -39,6 +57,11 @@ public class PrimaryController {
         finished = false;
     }
 
+    /**
+     * hitTL method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board TL - Top Left
+     */
     @FXML
     private void hitTL() {
         if (!finished) {
@@ -58,6 +81,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitTM method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board TM - Top Middle
+     */
     @FXML
     private void hitTM() {
         if (!finished) {
@@ -77,6 +105,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitTR method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board TR - Top Right
+     */
     @FXML
     private void hitTR() {
         if (!finished) {
@@ -96,6 +129,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitML method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board ML - Middle Left
+     */
     @FXML
     private void hitML() {
         if (!finished) {
@@ -115,6 +153,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitMM method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board MM - Center of Board (Middle Middle)
+     */
     @FXML
     private void hitMM() {
         if (!finished) {
@@ -134,6 +177,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitMR method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board MR - Middle Right
+     */
     @FXML
     private void hitMR() {
         if (!finished) {
@@ -153,6 +201,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitLL method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board LL - Lower Left
+     */
     @FXML
     private void hitLL() {
         if (!finished) {
@@ -172,6 +225,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitLM method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board LM - Lower Middle
+     */
     @FXML
     private void hitLM() {
         if (!finished) {
@@ -191,6 +249,11 @@ public class PrimaryController {
         }
     }
 
+    /**
+     * hitLR method - checks if game is over. If not, then checks is node for
+     * cell is empty. If so, then allocates node in array to contain a shape,
+     * and reveals shape on the board LR - Lower Right
+     */
     @FXML
     private void hitLR() {
         if (!finished) {
@@ -210,12 +273,18 @@ public class PrimaryController {
         }
     }
 
-
+    /**
+     * ends the game
+     */
     @FXML
     private void close() {
         System.exit(0);
     }
 
+    /**
+     * newGame method - creates new array, sets all variables to prior values,
+     * and resets all shapes on the board
+     */
     @FXML
     private void newGame() {
         playerTurn = 0;
@@ -249,6 +318,15 @@ public class PrimaryController {
         LRCircle.setVisible(false);
     }
 
+    /**
+     * rotateRectangle method - Takes three rectangle parameters and rotates
+     * them all with a ParallelTransition instance
+     *
+     *
+     * @param rectangle1
+     * @param rectangle2
+     * @param rectangle3
+     */
     @FXML
     private void rotateRectangle(Rectangle rectangle1, Rectangle rectangle2, Rectangle rectangle3) {
         RotateTransition rotate1 = new RotateTransition(Duration.seconds(2), rectangle1);
@@ -268,6 +346,14 @@ public class PrimaryController {
         rotateRectangles.play();
     }
 
+    /**
+     * fadeCircles method - Takes three circle parameters and makes them all
+     * fade in and out with a ParallelTransition instance
+     *
+     * @param circle1
+     * @param circle2
+     * @param circle3
+     */
     @FXML
     private void fadeCircles(Circle circle1, Circle circle2, Circle circle3) {
         FadeTransition fade1 = new FadeTransition(Duration.seconds(2), circle1);
@@ -290,6 +376,11 @@ public class PrimaryController {
         fadeCircles.play();
     }
 
+    /**
+     * checkWinner method - checks all possible game endings and applies an
+     * animation based on what ending the user reaches Will also set game to
+     * finished to prevent moves made after a win
+     */
     private void checkWinner() {
         //Checks if player one won a column based on array values
         if (theBoard[0][0].getShapeType() == rect && theBoard[1][0].getShapeType() == rect && theBoard[2][0].getShapeType() == rect) {

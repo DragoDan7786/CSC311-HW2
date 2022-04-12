@@ -15,6 +15,11 @@ public class App extends Application {
 
     private static Scene scene;
 
+    /**
+     *
+     * @param stage
+     * @throws IOException
+     */
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 640, 480);
@@ -31,6 +36,10 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         launch();
     }
